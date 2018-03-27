@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+* {	margin:0; padding:0;}
+html, body {height:100%;}
+body { font: 100%/1.4  Arial, Helvetica, sans-serif; background: #999; margin: 0; padding: 0; color:#1e1933; text-align:center; /* horizontal centering for IE Win quirks */}
+img, p, ul, ol, dl, li, h1, h2, h3, h4, h5, h6, blockquote, table { border:0; margin:0; padding:0;}
+a img { border: none;}
+
+h1, h2, h3, h4 { font-family:Arial, Helvetica, sans-serif; font-weight:normal; }
+h1 { font-family:Georgia, Times, serif; font-size:2em; color:#1e1933; padding-bottom:0.2em;}
+h2 { font-size:1.3em; color:#00a7e8; padding:0.3em 0 0.1em;}
+h3 { font-size:1em; color:#00a7e8;}
+p { font-size:1em; padding-bottom:0.8em; line-height:1.6em;}
+blockquote {padding:0 30px; font-style:italic; color:#E26897; }
+ul {margin-left:10%; margin-bottom:0.8em;}
+
+a:link { color:#666; text-decoration: underline; }
+a:visited {	color:#666; text-decoration: underline;}
+a:hover, a:active, a:focus { text-decoration: none;}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+#container { width: 100%; background: #FFF; margin: 0 auto; text-align:left; }
+
+#header { width:80%; max-width:1100px; background:#FFF; margin:0 auto; clear:both;}
+.logo {float:left; padding:15px 0 20px;}
+.contact { float:right; font-size:1.4em; font-family:Arial, Helvetica, sans-serif; font-weight:normal; text-align:right; padding:25px 0 0;}
+.topButtons, .topButtons2 {float:right; margin-bottom:15px; clear:right;}
+.button {color:#1e1933; }
+.button a {text-decoration:none; border:1px solid #00a7e8; padding:5px 10px; display:inline-block;}
+.button a:hover, .button a:active, .button a:focus {background-color:#00a7e8; color:#FFF;}
+.phone, .address {color:#00a7e8; padding-top:15px;}
+
+#mainImage { width:100%; background:url(../_images/self-storage-silverdale-top-wide.jpg); background-repeat:no-repeat; background-position:center; clear:both; height:292px; position:relative;}
+#box {width:80%; max-width:1098px; margin:0 auto; border-left:1px solid #FFF; border-right:1px solid #FFF; height:292px; position:relative; z-index:2;}
+#navContainer { width:100%; background-color:#00a7e8; opacity:0.8; position:absolute; top:0; z-index:3;}
+#nav {width:80%; max-width:1100px; margin:0 auto; color:#1e1933; font-size:1.2em; font-family:Arial, Helvetica, sans-serif; font-weight:normal; border-left:1px solid #FFF; border-right:1px solid #FFF;}
+#blueLine {width:100%; background-color:#00a7e8; opacity:0.8; position:absolute; bottom:0; height:6px;}
+
+#background { width:100%; background-image:url(../_images/light_texture_3px_tile.jpg); background-repeat:repeat; float:left;}
+#main { width:80%; max-width:1100px; background:#FFF; margin:0 auto; clear:both;}
+#mainBackWhite {width:100%; background-color:#FFF; float:left;}
+.content {width:60%; float:left; padding:4% 5%;}
+.imageColumn {width:25%; float:right; padding:5% 5% 5% 0;}
+.imageColumn img {width:100%;}
+
+#footer { width:100%; background-color:#999; margin:0; clear:both;}
+.footer2 {width:80%; max-width:1100px; text-align:center; margin:0 auto; padding:25px 0; color:#FFF; font-size:1em;}
+.footer2 a {color:#FFF;}
+.small {font-size:0.9em;}
+p.button {text-align:center;}
+p.button a { display:block; width:90%; padding:2% 5%; background-color:#00a7e8; color:#FFF;}
+p.button a:hover {background-color:#1e1933;}
+
+
+/* ~~ nav ~~ */
+#nav ul { list-style:none; margin:0;}
+#nav li { display:inline-block; border-right:1px solid #FFF;}
+#nav li.active { padding: 7px 20px; background-color:#1e1933; color:#00a7e8; margin:0; }
+#nav li a { padding: 7px 20px; display:inline-block; color:#1e1933; text-decoration:none;}
+#nav li a:hover {background-color:#1e1933; color:#00a7e8; }
+
+/* ~~ tables ~~ */
+table { padding-bottom:0.8em; margin-bottom:0.8em;}
+table td {border:1px solid #CCC; padding:10px;}
+.form1 table {border:1px solid #1e1933; padding:10px;}
+.form1 table td {border:0; padding:5px;}
+.p {width:90%;}
+.send {padding:10px; background-color:#00a7e8; color:#FFF; font-weight:bold; cursor:pointer; border:0;}
+
+/****************************************************
+MEDIA QUERIES
+*****************************************************/
+/* for 1000px or less */
+@media screen and (max-width: 1000px) {
+	#header, #main, #box, #nav, .footer2 { width:90%;}
+	.contact {padding-top:20px;}
+	.phone {font-size:1.2em;}
+	#nav {font-size:1.2em;}
+	#nav li.active, #nav li a { padding:8px 18px;}
+}
+/* for 900px or less */
+@media screen and (max-width: 900px) {
+	.contact { font-size:1em;}
+}
+/* for 750px or less */
+@media screen and (max-width: 750px) {
+	.logo img {width:60%;}
+	.contact {font-size:1em; padding-top:0px; float:none; clear:both; margin:0 auto 5px; text-align:center;}
+	.topButtons, .topButtons2 {float:none; clear:none; margin-bottom:8px;}
+	.phone {font-size:1em;}
+	.imageColumn {float:left; clear:both; width:90%; padding:0 5% 2%;}
+	.imageColumn img {display:none;}
+	.content {width:90%; padding:4% 5% 1%;}
+	#nav {font-size:1em; font-weight:bold;}
+	#nav li.active, #nav li a { padding: 7px 12px;}
+	.logo {margin:0 auto; float:none; text-align:center; padding:8px 0 10px;}
+	#mainImage {height:200px; overflow:hidden;}
+	.button a {padding:3px 8px; }
+}
+/* for 550px or less */
+@media screen and (max-width: 550px) {
+	.logo img {width:80%;}
+	.navbar-header{float:none;}
+	#nav {width:101.5%; float:left; position:relative; font-size:17px; float:none; line-height:17px; clear:both; margin-bottom:0px; background-color:inherit;}
+	#nav ul {padding:0; margin:0 0 3px; width:98%; float:none; display:none; background-color:#00a7e8; }
+	#nav ul li {display:block; border-bottom: 1px solid #fff; width:100%;}
+	#nav ul li a { width:100%; padding:6px 0;}
+	#nav ul li a:hover {background-color:#1e1933; color:#FFF; }
+	#nav ul li.active {width:100%; padding:6px 0; left:0; clear:left; background-color:#1e1933; color:#FFF;}
+}
+/* for 430px or less */
+@media screen and (max-width: 430px) {
+	.logo img {width:90%;}
+	.topButtons {display:none;}
+	table td {font-size:0.8em;}
+}
